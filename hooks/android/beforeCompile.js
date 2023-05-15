@@ -1,7 +1,5 @@
 const { join } = require('path');
 const { existsSync, readFileSync, writeFileSync } = require('fs');
-const { parseElementtreeSync: ParseElementtreeSync } = require('cordova-common/src/util/xml-helpers');
-const platform = require('cordova-android');
 
 module.exports = function (context) {
   if (!isExecutable()) {
@@ -24,19 +22,11 @@ module.exports = function (context) {
  * @returns Boolean
  */
 function isExecutable () {
-  const majorVersion = parseInt(platform.version(), 10);
-  return majorVersion < 10 && majorVersion >= 9;
+  return true;
 }
 
 function getPluginKotlinVersion (context) {
-  const pluginConfig = new ParseElementtreeSync(join(context.opts.projectRoot, 'plugins/@havesource/cordova-plugin-push/plugin.xml'));
-
-  return pluginConfig
-    .findall('./platform[@name="android"]').pop()
-    .findall('./config-file[@target="config.xml"]').pop()
-    .findall('preference').filter(
-      elem => elem.attrib.name.toLowerCase() === 'GradlePluginKotlinVersion'.toLowerCase()
-    ).pop().attrib.value;
+  return '1.3.50'
 }
 
 function updateBuildGradle (context, buildGradleFilePath) {
