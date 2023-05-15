@@ -1,5 +1,5 @@
 {
-  "name": "@havesource/cordova-plugin-push",
+  "name": "@dfa1234/cordova-plugin-push",
   "version": "4.0.0-dev.0",
   "description": "Register and receive push notifications.",
   "scripts": {
