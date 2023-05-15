@@ -26,7 +26,7 @@ function isExecutable () {
 }
 
 function getPluginKotlinVersion (context) {
-  return '1.5.1'
+  return '1.5.20'
 }
 
 function updateBuildGradle (context, buildGradleFilePath) {
