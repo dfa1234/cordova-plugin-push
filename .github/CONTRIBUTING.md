@@ -28,7 +28,7 @@ Before we can start submitting code contributions, we setup locally a workspace 
     ```bash
     git checkout -b my-awesome-new-feature
     git push --set-upstream origin my-awesome-new-feature
-    git remote add upstream https://github.com/havesource/cordova-plugin-push.git
+    git remote add upstream https://github.com/dfa1234/cordova-plugin-push.git
     ```
 
 2. Install project dependencies
